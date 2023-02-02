@@ -22,7 +22,10 @@ if (WEBGL.isWebGLAvailable()) {
 
   /* Mesh */
   const geometry01 = new THREE.IcosahedronGeometry(.75, 0);
-  const material01 = new THREE.MeshBasicMaterial({color: '#ffe1c7'});
+  const material01 = new THREE.MeshStandardMaterial({
+    color: '#ffe1c7',
+    metalness: .5
+  });
   const obj01 = new THREE.Mesh(geometry01, material01);
   obj01.position.z = 1;
   scene.add(obj01);
